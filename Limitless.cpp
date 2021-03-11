@@ -15,6 +15,7 @@ void print_menu()
     cout<<"1.Instructions"<<endl;
     cout<<"2.Choose mode"<<endl;
     cout<<"3.Play"<<endl;
+    cout<<"4.Exit"<<endl;
     cout<<"--------------------"<<endl<<endl;
     cout<<"Enter a number: "<<endl<<endl<<endl;
 }
@@ -31,6 +32,7 @@ void print_instructions()
     cin>>is_back;
     if(is_back=='n'||is_back=='N')
     {
+        system("cls");
         print_instructions();
     }
 }
@@ -46,13 +48,19 @@ int main()
         switch (choose)
         {
         case 1:
+            system("cls");
             print_instructions();
             break;
         case 2:
+            system("cls");
             choose_mode();
             break;
         case 3:
+            system("cls");
             game_loop();
+            break;
+        case 4:
+            return_menu=true;
             break;
         default:
             cout<<"Error: Invalid choice."<<endl;
